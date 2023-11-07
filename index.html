@@ -1,7 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Slider in CSS</title>
+<title>Marie ilutuba</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy&display=swap">
 <html lang="ee"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
+<body>
+    <h1 id="pealkiri">Marie Ilutuba<br></h1>
+    <div id="container">
+        <div id="left-column">
+
+    <a href="hinnakiri.html" target="_blank" class="nupud">Hinnakiri</a> 
+    <a href="hinnakiri.html" target="_blank" class="nupud">Broneeri Aeg<br></a>
+
+    <div id="parent-container">
+
+        <div class="navigation-buttons">
+          <div class="previous nav-btn"></div>
+          <div class="next nav-btn">></div>
+        </div>
+        
+        <div class="slider-carousel">
+          <div class="images main">
+            <img src="https://media.voog.com/0000/0048/5470/photos/WOW_1146_huge.jpg" alt="flower 1" />
+            <div class="image-text">Üks meie ilutubadest</div>
+          </div>
+        <div class="images">
+            <img src="https://sakuilutuba.files.wordpress.com/2017/09/cropped-ilutuba.jpg" alt="flower 2" />
+            <div class="image-text">Rahul klient</div>
+          </div>
+          <div class="images">
+            <img src="https://static.ssb.ee/images/companies/16137267_OKI-ILUTUBA-OU_43998849_irxl.png" alt="flower 3" />
+            <div class="image-text">Meie tooted (saab osta kohapeal)</div>
+          </div>      
+        </div>
+        
+        </div>
+        
+        <script>
+        
+            const previous = document.querySelector('.previous');
+            const next = document.querySelector('.next');
+            const images = document.querySelector('.slider-carousel').children;
+            const totalImages = images.length;
+            let currentIndex = 0;
+        
+        
+            // Event Listeners to previous and next buttons
+            previous.addEventListener('click', () => {
+              previousImage()
+            })
+        
+            next.addEventListener('click', () => {
+              nextImage();
+            })
+            
+            setInterval(()=>{
+                nextImage();
+            },10000);
+            
+            // Function to go to next Image
+            function nextImage(){
+        
+              images[currentIndex].classList.remove('main');
+                if(currentIndex == totalImages-1){
+                    currentIndex = 0;
+                }
+                else{
+                    currentIndex++;
+                }
+        
+              images[currentIndex].classList.add('main');
+              
+            }
+            
+            // Function to go to previous Image
+            function previousImage(){
+        
+              images[currentIndex].classList.remove('main');
+                if(currentIndex == 0){
+                    currentIndex = totalImages-1;
+                }
+                else{
+                    currentIndex--;
+                }
+            
+              images[currentIndex].classList.add('main');
+        
+            }
+            
+        </script>
+        </div>
+        <div id="right-column">
+            <p>test</p>
+        </div>
+        
+
+</body>
+</html>

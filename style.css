@@ -1,0 +1,108 @@
+body {
+    background-image: url('https://espak.ee/epood/wp-content/uploads/2022/05/383816.jpg');
+    background-repeat: repeat-x; /* This repeats the image horizontally only. */
+  }
+
+.carousel-container {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+
+}
+
+.navigation-buttons .previous {
+  position: absolute;
+  z-index: 10;
+  font-size: 25px;
+  top: 40%;
+  left: 10px;
+  font-weight: 700;
+}
+
+.navigation-buttons .next {
+  right: 10px;
+  position: absolute;
+  font-size: 25px;
+  z-index: 10;
+  top: 40%;
+}
+
+.navigation-buttons .nav-btn {
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.navigation .nav-btn:hover {
+  background: white;
+}
+
+.slider-carousel {
+  margin-top: 20px;
+  transition: all 0.3s ease;
+
+}
+.slider-carousel img {
+  width: 100%;
+  transition: all 0.3s ease;
+  border:8px solid white;
+}
+
+.images {
+  position: absolute;
+  display: none;
+}
+
+.main {
+  display: block;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  width: 103%;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.3);
+  height: 35px;
+}
+
+.nupud {
+    color: black;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+}
+
+#pealkiri {
+    font-family: 'Satisfy', cursive;
+    font-size: 50px;
+}
+
+#container {
+    display: flex;
+    max-width: 1200px; /* Set a maximum width for the layout */
+    margin: 0 auto; /* Center the layout horizontally */
+}
+
+#left-column {
+    width: 30%; /* Adjust the width of the left column as needed */
+    padding: 20px;
+}
+
+#right-column {
+    width: 70%; /* Adjust the width of the right column as needed */
+}
+
+/* Add any additional styling for your columns as needed */
